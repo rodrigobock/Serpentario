@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Estoque</title>
 
@@ -19,9 +21,7 @@
 
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
-
                 <strong>Serpentário</strong>
-
                 <div>
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
@@ -36,9 +36,9 @@
                             <a class="nav-link" href="consultaFuncionario.jsf">Funcionários</a>
                         </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="estoque.jsf">Estoque</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="estoque.jsf">Estoque</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -46,23 +46,62 @@
 
         <h:messages></h:messages>
 
-        <div id="ladoEsquerdo">
-
-        </div>
-
-        <div id="ladoDireito">
-
+        <f:view>
             <h:form>
 
-                <div id="consultaEstoque">
-                    <h:commandButton id="botaopesquisa" value="Pesquisar" action="#{beanEstoque.consultar()}"></h:commandButton> 
+                <div class="ladoEsquerdo">
+
+                    <div class="esquerdaCima">
+                        <div class="qtdeFuncionarios">
+                            <h:outputLabel value="#{beanFuncionario.countFunc}"></h:outputLabel>
+                            <br></br>
+                            <h:outputLabel value="Funcionarios"></h:outputLabel>
+                        </div>
+                        <div>
+                            <h:commandButton value="Consultar" action="#{beanFuncionario.countFunc()}"></h:commandButton> 
+                        </div>
+                    </div>
+
+                    <div class="esquerdaBaixo">
+                        <div class="qtdeSerpentes">
+                            <h:outputLabel value="#{beanSerpente.countSerpente}"></h:outputLabel>
+                            <br></br>
+                            <h:outputLabel value="Serpentes"></h:outputLabel>
+                        </div>
+                        <div>
+                            <h:commandButton value="Consultar" action="#{beanSerpente.countSerp()}"></h:commandButton> 
+                        </div>
+                    </div>
+
                 </div>
 
-                <h:outputLabel id="qtdeEstoque" value="#{beanEstoque.qtdeBD}"></h:outputLabel>
+                <div class="ladoDireito">
+
+                    <div class="direitaCima">
+                        <div class="qtdeBDvalor">
+                            <h:outputLabel id="qtdeBDestoque" value="#{beanEstoque.qtdeBD}"></h:outputLabel>
+                            <br></br>
+                            <h:outputLabel value="Camundongos"></h:outputLabel>
+                        </div>
+                        <div>
+                            <h:commandButton  id="botaopesquisa" value="Consultar" action="#{beanEstoque.consultar()}"></h:commandButton> 
+                        </div>
+                    </div>
+
+                    <div class="direitaBaixo">
+                        <div class="insereCamundongo">
+                            <h:outputLabel value="Digite quantos novos camundongos foram adicionados: "></h:outputLabel>
+                            <br></br>
+                            <p:inputText value="#{beanEstoque.alimento.qntd}"/> 
+                        </div>
+                        <div class="direitoBaixo">
+                            <h:commandButton id="botaoinserir" value="Adicionar" action="#{beanEstoque.inserir()}"></h:commandButton> 
+                        </div>
+                    </div>
+                </div>
 
             </h:form>
-
-        </div>
+        </f:view>
 
     </h:body>
 </html>

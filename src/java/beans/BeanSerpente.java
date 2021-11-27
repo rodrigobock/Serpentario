@@ -6,7 +6,6 @@ import models.Serpente;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -29,6 +28,7 @@ public class BeanSerpente {
     private String sexo;
     private String ecdise;
     private String observacao;
+    private int countSerpente;
 
     private List<Serpente> lista = new ArrayList<>();
     private List<Funcionario> funcionarios = new ArrayList<>();
@@ -65,11 +65,11 @@ public class BeanSerpente {
             msg = new FacesMessage("Informe a espécie da serpente!");
             view.addMessage(null, msg);
         }
-/*
+        /*
         if (serpente.getAlimentacao().equals("Sim")) {
             be.atualizar();
         }
-*/
+         */
         if (msg == null) {
 
             if (ds.salvar(serpente)) {
@@ -133,6 +133,10 @@ public class BeanSerpente {
     // Faz uma lista dos funcionários cadastrados
     public void consultarFuncionarios() {
         funcionarios = new DAOFuncionario().todosFuncionarios();
+    }
+
+    public void countSerp() {
+        countSerpente = new DAOSerpente().qtdeSerpente();
     }
 
     // Getters and Setters
@@ -272,4 +276,12 @@ public class BeanSerpente {
         this.idFuncionario = idFuncionario;
     }
 
+    public int getCountSerpente() {
+        return countSerpente;
+    }
+
+    public void setCountSerpente(int countSerpente) {
+        this.countSerpente = countSerpente;
+    }
+    
 }

@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <h:head>
-        <title>Menu</title>
+        <title>Pagina Inicial</title>
         <meta charset="UTF-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <!--===============================================================================================-->
@@ -18,46 +17,39 @@
 
     <h:body>
 
-        <main>
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <strong>Serpentário</strong>
+                <div>
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.jsf">Home</a>
+                        </li>
 
-            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-                <div class="container">
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultaSerpentes.jsf">Serpentes</a>
+                        </li>
 
-                    <strong>Serpentário</strong>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultaFuncionario.jsf">Funcionários</a>
+                        </li>
 
-                    <div>
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="menu.jsf">Home</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="consultaSerpentes.jsf">Serpentes</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="consultaFuncionario.jsf">Funcionários</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="estoque.jsf">Estoque</a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="estoque.jsf">Estoque</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav> 
+            </div>
+        </nav> 
 
-            <section>
+        <section>
 
-                <div class="videoWrapper">
-                    <img src="resources/img/serpente.jpg" class="img-fluid news-detail-image" alt=""></img>
-                </div>
+            <div class="videoWrapper">
+                <img src="resources/img/serpente.jpg" class="img-fluid news-detail-image" alt=""></img>
+            </div>
 
-            </section>
-
-        </main>
+        </section>
 
     </h:body>
 
 </html>
-

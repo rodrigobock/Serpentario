@@ -14,9 +14,12 @@ public class BeanEstoque {
 
     private int qtde;
     private int qtdeBD;
-    private Alimento alimento;
-    private DAOAlimento da;
+//    private Alimento alimento;
+//    private DAOAlimento da;
 
+    Alimento alimento = new Alimento();
+    DAOAlimento da = new DAOAlimento();
+    
     /*
         Metodos intermediarios
     

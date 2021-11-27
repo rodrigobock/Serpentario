@@ -54,24 +54,89 @@ body{
 }
 
 #ladoEsquerdo{
-    height: 100%;
+    height: 900px;
     width: 50%;
     position: relative;
     float: left;
-    background-color: #0a7025;
+    text-align: center;
 }
 
 
 #ladoDireito{
-    height: 100%;
+    height: 900px;
     width: 50%;
     position: relative;
     float: right;
-    background-color: white;
     text-align: center;
 }
 
-#qtdeEstoque{
-    font-size: 60px;
+#qtdeBDestoque{
+    font-size: 72px;
+
 }
 
+.inserirEstoque{
+    width: 100%;
+    height: 50%;
+    background-color: green; 
+}
+
+
+.ladoEsquerdo{
+    height: 900px;
+    width: 50%;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+
+.ladoDireito{
+    height: 900px;
+    width: 50%;
+    position: relative;
+    float: right;
+    text-align: center;
+}
+
+.qtdeBDvalor{
+    font-size: 72px;
+    height: 70%;
+} 
+
+.qtdeFuncionarios{
+    font-size: 72px;
+    height: 70%;
+} 
+
+.qtdeSerpentes{
+    font-size: 72px;
+    height: 70%;
+}
+
+.insereCamundongo{
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 36px;
+    height: 70%;
+}
+
+.direitaCima{
+    width: 100%;
+    height: 50%;
+}
+
+.direitaBaixo{
+    width: 100%;
+    height: 50%;
+}
+
+.esquerdaCima{
+    width: 100%;
+    height: 50%; 
+} 
+
+.esquerdaBaixo{
+    width: 100%;
+    height: 50%; 
+}

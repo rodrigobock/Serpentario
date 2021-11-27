@@ -145,4 +145,35 @@ public class DAOSerpente {
         }
     }
 
+    public int qtdeSerpente() {
+        try {
+
+            int quantidade = 0;
+
+            String sql;
+            sql = "SELECT COUNT(*) as qtde FROM serpentes";
+            PreparedStatement ps;
+
+            Connection con = Conection.conectar();
+
+            ps = con.prepareStatement(sql);
+
+            ResultSet rs;
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                int qtdeFunc = rs.getInt("qtde");
+
+                quantidade = qtdeFunc;
+            }
+
+            ps.close();
+
+            return quantidade;
+
+        } catch (SQLException ex) {
+            throw new RuntimeException();
+        }
+    }
+
 }

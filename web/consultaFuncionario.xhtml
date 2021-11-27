@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <h:head>
 
@@ -52,46 +53,49 @@
 
             <section class="corpo">
 
-                <h:form>
+                <f:view>
+                    <h:form>
 
-                    <div id="pesquisaFuncionario">
-                        <h:outputLabel>Informe parte do nome do funcionario: </h:outputLabel>
-                        <br></br>
-                        <h:inputText class="campos" value="#{beanFuncionario.funcionario.nomeCompleto}"/>
-                        <h:commandButton class="botaopesquisa" value="Pesquisar" action="#{beanFuncionario.consultar()}"></h:commandButton> 
-                    </div>
+                        <div id="pesquisaFuncionario">
+                            <h:outputLabel>Informe parte do nome do funcionario: </h:outputLabel>
+                            <br></br>
+                            <h:inputText class="campos" value="#{beanFuncionario.funcionario.nomeCompleto}"/>
+                            <h:commandButton class="botaopesquisa" value="Pesquisar" action="#{beanFuncionario.consultar()}"></h:commandButton> 
+                        </div>
 
 
-                    <div class="card" style="margin: 50px">
-                        <p:dataTable var="func" value="#{beanFuncionario.lista}">
-                            <p:column headerText="ID">
-                                <h:outputText value="#{func.id}" />
-                            </p:column>
+                        <div class="card" style="margin: 50px">
+                            <p:dataTable var="func" value="#{beanFuncionario.lista}">
+                                <p:column headerText="ID">
+                                    <h:outputText value="#{func.id}" />
+                                </p:column>
 
-                            <p:column headerText="Nome Completo">
-                                <h:outputText value="#{func.nomeCompleto}" />
-                            </p:column>
+                                <p:column headerText="Nome Completo">
+                                    <h:outputText value="#{func.nomeCompleto}" />
+                                </p:column>
 
-                            <p:column headerText="Usuário">
-                                <h:outputText value="#{func.usuario}" />
-                            </p:column>
+                                <p:column headerText="Usuário">
+                                    <h:outputText value="#{func.usuario}" />
+                                </p:column>
 
-                            <p:column headerText="Senha">
-                                <h:outputText value="#{func.senha}" />
-                            </p:column>
+                                <p:column headerText="Senha">
+                                    <h:outputText value="#{func.senha}" />
+                                </p:column>
 
-                            <p:column headerText="Editar">
-                                <h:commandButton value="Editar" action="#{beanFuncionario.Editar(func)}"></h:commandButton>
-                            </p:column>
+                                <p:column headerText="Editar">
+                                    <h:commandButton value="Editar" action="#{beanFuncionario.Editar(func)}"></h:commandButton>
+                                </p:column>
 
-                            <p:column headerText="Excluir">
-                                <h:commandButton value="Excluir" action="#{beanFuncionario.Excluir(func)}"></h:commandButton>
-                            </p:column>
+                                <p:column headerText="Excluir">
+                                    <h:commandButton value="Excluir" action="#{beanFuncionario.Excluir(func)}"></h:commandButton>
+                                </p:column>
 
-                        </p:dataTable>
-                    </div>
+                            </p:dataTable>
+                        </div>
 
-                </h:form>
+                    </h:form>
+                </f:view>
+
 
                 <div id="cadNovoFunc">
                     <p:button href="cadastroFuncionario.jsf" value="Cadastrar funcionário"></p:button>

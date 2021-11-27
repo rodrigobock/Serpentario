@@ -19,6 +19,7 @@ public class BeanFuncionario {
     private String usuario;
     private String senha;
     private int tipoUser;
+    private int countFunc;
 
     private List<Funcionario> lista = new ArrayList<>();
 
@@ -131,7 +132,20 @@ public class BeanFuncionario {
         lista = new DAOFuncionario().consultar(funcionario.getNomeCompleto());
     }
 
+    public void countFunc() {
+        countFunc = new DAOFuncionario().qtdeFunc();
+    }
+
     // Getters and Setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNomeCompleto() {
         return nomeCompleto;
     }
@@ -164,6 +178,14 @@ public class BeanFuncionario {
         this.tipoUser = tipoUser;
     }
 
+    public int getCountFunc() {
+        return countFunc;
+    }
+
+    public void setCountFunc(int countFunc) {
+        this.countFunc = countFunc;
+    }
+
     public List<Funcionario> getLista() {
         return lista;
     }
@@ -187,5 +209,7 @@ public class BeanFuncionario {
     public void setDf(DAOFuncionario df) {
         this.df = df;
     }
+
+    
 
 }
