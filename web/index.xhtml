@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+
+        <title>Login</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="resources/css/util.css"></link>
+        <link rel="stylesheet" type="text/css" href="resources/css/main.css"></link>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"></link>
+        <!--===============================================================================================-->
+
+    </h:head>
+
+    <h:body>       
+
+        <h:messages></h:messages>
+
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 p-t-50 p-b-90">
+                    <h:form class="login100-form validate-form flex-sb flex-w">
+                        <span class="login100-form-title p-b-51">
+                            Login
+                        </span>
+
+
+                        <div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+                            <p:inputText class="input100" placeholder="Usuário" value="#{beanFuncionario.funcionario.usuario}"/>
+                        </div>
+
+
+                        <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+                            <p:password class="input100" value="#{beanFuncionario.funcionario.senha}"/>
+                        </div>
+
+                        <div class="container-login100-form-btn m-t-17">
+                            <h:commandButton class="login100-form-btn" value="Login" action="#{beanFuncionario.validateAccess()}"></h:commandButton>
+                        </div>
+
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+
+    </h:body>
+</html>

@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+}
+
+#divsuperior{
+    height: 10em;
+}
+
+#pesquisaFuncionario{
+    height: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+#cadNovoFunc{
+    margin-left: 50px;
+}
+
+#cadSerpente{
+    height: 30em;
+    width: 100%;
+    text-align: center;
+}
+
+#editFuncionario{
+    color: black;
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#editSerpente{
+    color: black;
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#pesquisaSerpente{
+    height: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+#Login{
+    background-color: green;
+    height: 25em;
+    width: 25em;
+    text-align: center;
+
+    margin-left: 37.5%;
+}
+
+#ladoEsquerdo{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    float: left;
+    background-color: #0a7025;
+}
+
+
+#ladoDireito{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    float: right;
+    background-color: white;
+    text-align: center;
+}
+
+#qtdeEstoque{
+    font-size: 60px;
+}
+
