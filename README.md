@@ -10,5 +10,8 @@ Linguagens utilizadas para desenvolver:
   Banco de dados
    * PostgreSQL
    
-    
+   Link para acessar o sistema: https://serpentario-system.herokuapp.com/
+   
+   usuário: admin
+   senha: admin
   
