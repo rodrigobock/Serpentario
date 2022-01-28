@@ -65,11 +65,11 @@ public class BeanSerpente {
             msg = new FacesMessage("Informe a espécie da serpente!");
             view.addMessage(null, msg);
         }
-        /*
+
         if (serpente.getAlimentacao().equals("Sim")) {
             be.atualizar();
         }
-         */
+
         if (msg == null) {
 
             if (ds.salvar(serpente)) {
@@ -112,7 +112,11 @@ public class BeanSerpente {
 
         FacesContext view = FacesContext.getCurrentInstance();
         FacesMessage msg = null;
-
+/*
+        if (serpente.getAlimentacao().equals("Sim")) {
+            be.atualizar();
+        }
+*/
         if (ds.editar(serpente)) {
             try {
                 serpente = new Serpente();
@@ -283,5 +287,5 @@ public class BeanSerpente {
     public void setCountSerpente(int countSerpente) {
         this.countSerpente = countSerpente;
     }
-    
+
 }

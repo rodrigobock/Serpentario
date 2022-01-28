@@ -11,9 +11,4 @@ Linguagens utilizadas para desenvolver:
    * PostgreSQL
    
     
- Para acessar: 
- 
- URL: https://serpentario-system.herokuapp.com/
- 
- usuário: Teste
- senha: 123
+  
