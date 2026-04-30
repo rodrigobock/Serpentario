@@ -18,7 +18,7 @@ public class DatabaseInitializer implements ServletContextListener {
 
     private static final Logger LOG = Logger.getLogger(DatabaseInitializer.class.getName());
 
-    private static final String[] DDL_STATEMENTS = {
+    private static final String[] BASE_DDL = {
         "CREATE TABLE IF NOT EXISTS funcionario ("
             + "id SERIAL PRIMARY KEY,"
             + "nomecompleto VARCHAR(255) NOT NULL,"
@@ -58,7 +58,13 @@ public class DatabaseInitializer implements ServletContextListener {
         LOG.info("Inicializando schema do banco...");
         try (Connection con = Conection.conectar();
              Statement stm = con.createStatement()) {
-            for (String ddl : DDL_STATEMENTS) {
+            String schema = Conection.getSchema();
+            if (schema != null) {
+                stm.execute("CREATE SCHEMA IF NOT EXISTS " + schema);
+                stm.execute("SET search_path TO " + schema);
+                LOG.info("Usando schema: " + schema);
+            }
+            for (String ddl : BASE_DDL) {
                 stm.execute(ddl);
             }
             LOG.info("Schema do banco verificado/criado com sucesso.");

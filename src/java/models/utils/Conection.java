@@ -5,8 +5,11 @@ import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.regex.Pattern;
 
 public class Conection {
+
+    private static final Pattern VALID_IDENTIFIER = Pattern.compile("[a-zA-Z_][a-zA-Z0-9_]*");
 
     public static Connection conectar() {
         try {
@@ -16,6 +19,17 @@ public class Conection {
         } catch (SQLException | ClassNotFoundException ex) {
             throw new RuntimeException(ex);
         }
+    }
+
+    public static String getSchema() {
+        String schema = getEnv("DB_SCHEMA");
+        if (schema == null || schema.isEmpty()) {
+            return null;
+        }
+        if (!VALID_IDENTIFIER.matcher(schema).matches()) {
+            throw new IllegalStateException("DB_SCHEMA invalido: " + schema);
+        }
+        return schema;
     }
 
     private static DbConfig readConfig() {
@@ -45,7 +59,7 @@ public class Conection {
             );
         }
 
-        return new DbConfig(ensureSsl(url), user, password);
+        return new DbConfig(applyExtras(url), user, password);
     }
 
     private static DbConfig parsePostgresUrl(String raw, String envUser, String envPassword) {
@@ -73,17 +87,22 @@ public class Conection {
             if (query != null && !query.isEmpty()) {
                 jdbc += "?" + query;
             }
-            return new DbConfig(ensureSsl(jdbc), user, password);
+            return new DbConfig(applyExtras(jdbc), user, password);
         } catch (URISyntaxException ex) {
             throw new IllegalStateException("DATABASE_URL invalida: " + raw, ex);
         }
     }
 
-    private static String ensureSsl(String jdbcUrl) {
-        if (jdbcUrl.contains("sslmode=")) {
-            return jdbcUrl;
+    private static String applyExtras(String jdbcUrl) {
+        String url = jdbcUrl;
+        if (!url.contains("sslmode=")) {
+            url += (url.contains("?") ? "&" : "?") + "sslmode=require";
         }
-        return jdbcUrl + (jdbcUrl.contains("?") ? "&" : "?") + "sslmode=require";
+        String schema = getSchema();
+        if (schema != null && !url.contains("currentSchema=")) {
+            url += "&currentSchema=" + schema;
+        }
+        return url;
     }
 
     private static String getEnv(String name) {
