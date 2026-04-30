@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="207c5d76-8d46-46c9-b935-534d68baf7e3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/target/Serpentario.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/DAO/DAOAlimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/DAO/DAOAlimento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/DAO/DAOFuncionario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/DAO/DAOFuncionario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/DAO/DAOSerpente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/DAO/DAOSerpente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/beans/BeanEstoque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/beans/BeanEstoque.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/beans/BeanFuncionario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/beans/BeanFuncionario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/beans/BeanSerpente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/beans/BeanSerpente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/Alimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/Alimento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/Funcionario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/Funcionario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/Serpente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/Serpente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/utils/Conection$DbConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/utils/Conection$DbConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/utils/Conection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/utils/Conection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/utils/DatabaseInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Serpentario/WEB-INF/classes/models/utils/DatabaseInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/DAOAlimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/DAOAlimento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/DAOFuncionario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/DAOFuncionario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/DAOSerpente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/DAOSerpente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans/BeanEstoque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans/BeanEstoque.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans/BeanFuncionario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans/BeanFuncionario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans/BeanSerpente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans/BeanSerpente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Alimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Alimento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Funcionario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Funcionario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Serpente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Serpente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/utils/Conection$DbConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/utils/Conection$DbConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/utils/Conection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/utils/Conection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/utils/DatabaseInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/utils/DatabaseInitializer.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3D3Ph6i5WfjLAQjuQ91ES3ENCpi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Serpentario [clean,install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Usuario/Documents/Meus projetos/GitHub/Serpentario",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.customizations"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="207c5d76-8d46-46c9-b935-534d68baf7e3" name="Changes" comment="" />
+      <created>1777507895193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777507895193</updated>
+    </task>
+    <servers />
+  </component>
+</project>

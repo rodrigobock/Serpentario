@@ -1,3 +1,7 @@
-*
-!dist/
-!dist/Serpentario.war
+target/
+.idea/
+.git/
+*.iml
+.mvn/
+mvnw
+mvnw.cmd
