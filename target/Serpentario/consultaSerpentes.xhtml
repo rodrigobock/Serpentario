@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Consulta de serpentes</title>
+
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="resources/css/util.css"></link>
+        <link rel="stylesheet" type="text/css" href="resources/css/main.css"></link>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"></link>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></link>
+        <!--===============================================================================================-->
+
+    </h:head>
+    <h:body>
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+                <div class="container">
+
+                    <strong>Serpentário</strong>
+
+                    <div>
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.jsf">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="consultaSerpentes.jsf">Serpentes</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="consultaFuncionario.jsf">Funcionários</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="estoque.jsf">Estoque</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+
+            <h:messages></h:messages>
+
+            <section class="corpo">
+
+                <h:form>
+
+                    <div id="pesquisaSerpente">
+                        <h:outputLabel>Informe parte da espécie da serpente: </h:outputLabel>
+                        <br></br>
+                        <h:inputText class="campos" value="#{beanSerpente.serpente.especie}"/>
+                        <h:commandButton class="botaopesquisa" value="Pesquisar" action="#{beanSerpente.consultar()}"></h:commandButton> 
+                    </div>
+
+
+                    <div class="card" style="margin: 50px">
+                        <p:dataTable var="serp" value="#{beanSerpente.lista}">
+
+                            <p:column headerText="Código">
+                                <h:outputText value="#{serp.codigo}" />
+                            </p:column>
+
+                            <p:column headerText="Espécie">
+                                <h:outputText value="#{serp.especie}" />
+                            </p:column>
+
+                            <p:column headerText="Comprimento">
+                                <h:outputText value="#{serp.comprimento}" />
+                            </p:column>
+
+                            <p:column headerText="Peso">
+                                <h:outputText value="#{serp.peso}" />
+                            </p:column>
+
+                            <p:column headerText="Foi alimentada?">
+                                <h:outputText value="#{serp.alimentacao}" />
+                            </p:column>
+
+                            <p:column headerText="Peso do alimento">
+                                <h:outputText value="#{serp.pesoAlimento}" />
+                            </p:column>
+
+                            <p:column headerText="Sexo">
+                                <h:outputText value="#{serp.sexo}" />
+                            </p:column>
+
+                            <p:column headerText="Ecdise">
+                                <h:outputText value="#{serp.ecdise}" />
+                            </p:column>
+
+                            <p:column headerText="Observação">
+                                <h:outputText value="#{serp.observacao}" />
+                            </p:column>
+
+                            <p:column headerText="id Funcionario">
+                                <h:outputText value="#{serp.idFuncionario}" />
+                            </p:column>
+
+                            <p:column headerText="Editar/Excluir">
+                                <h:commandButton value="Editar" action="#{beanSerpente.Editar(serp)}"></h:commandButton>
+                                <h:commandButton value="Excluir" action="#{beanSerpente.Excluir(serp)}"></h:commandButton>
+                            </p:column>
+
+                        </p:dataTable>
+                    </div>
+
+                </h:form>
+
+                <div id="cadNovoFunc">
+                    <p:button href="cadastroSerpentes.jsf" value="Cadastrar serpentes"></p:button>
+                </div>
+
+            </section>
+
+        </main>
+
+    </h:body>
+</html>
+

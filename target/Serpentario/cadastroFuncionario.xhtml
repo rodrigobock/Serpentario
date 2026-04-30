@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Cadastro Funcionario</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="resources/css/util.css"></link>
+        <link rel="stylesheet" type="text/css" href="resources/css/main.css"></link>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"></link>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></link>
+        <!--===============================================================================================-->
+    </h:head>
+
+    <h:body id="telaCadastroUsuario">  
+
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+
+                <strong>Serpentário</strong>
+
+                <div>
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.jsf">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultaSerpentes.jsf">Serpentes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="consultaFuncionario.jsf">Funcionários</a>
+                        </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="estoque.jsf">Estoque</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+
+        <h:form>
+
+            <h:messages></h:messages>
+
+            <div id="cadFuncionario">
+
+                <h1>Cadastro de funcionário</h1>
+
+                <br></br>
+                <br></br>
+
+                <div>
+                    <h5>Nome do(a) funcionário(a)</h5>
+                    <p:inputText id="nomeFuncionario" value="#{beanFuncionario.funcionario.nomeCompleto}"/>
+                </div>
+
+                <br></br>
+
+                <div>
+                    <h5>Username</h5>
+                    <p:inputText id="username" value="#{beanFuncionario.funcionario.usuario}"/>
+                </div>
+
+                <br></br>
+
+                <div>
+                    <h5>Senha</h5>
+                    <p:password id="senhaUsuario" value="#{beanFuncionario.funcionario.senha}"/>
+                </div>
+
+                <br></br>
+
+                <div>
+                    <h:commandButton id="botaoSalvar" value="Salvar" action="#{beanFuncionario.salvar()}"></h:commandButton>
+                </div>
+
+                <br></br>
+
+                <div style="margin-bottom: 10px;">
+                    <p:button id="botaoCancelar" value="Cancelar" href="menu.jsf"></p:button>
+                </div>
+
+            </div>
+
+        </h:form>
+
+    </h:body>
+</html>
+
